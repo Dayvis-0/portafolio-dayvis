@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
 import { Contact } from './pages/contact/contact';
-import { AboutMe } from './components/about-me/about-me';
+import { AboutMe } from './pages/about-me/about-me';
 import { Studies } from './pages/studies/studies';
 import { Gallery } from './pages/gallery/gallery';
 import { Tools } from './pages/tools/tools';
