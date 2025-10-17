@@ -12,16 +12,16 @@ import { Meals } from './pages/hobbies/meals/meals';
 import { TimeLine } from './pages/time-line/time-line';
 
 export const routes: Routes = [
-    {path: '', component : Home },
-    {path: 'about-me', component : AboutMe },
-    {path: 'studies', component : Studies },
-    {path: 'contact', component : Contact },
-    {path: 'gallery', component : Gallery },
-    {path: 'tools', component : Tools },
-    {path: 'hobbies', component : Hobbies },
-    {path: 'gaming', component : Gaming },
-    {path: 'reading', component : Reading },
-    {path: 'meals', component : Meals },
-    {path: 'time-line', component : TimeLine },
+    {path: '', component : Home, title: 'Dayvis Atao - Portafolio' },
+    {path: 'about-me', component : AboutMe, title: 'Sobre mí - Dayvis Atao' },
+    {path: 'studies', component : Studies, title: 'Estudios - Dayvis Atao' },
+    {path: 'contact', component : Contact, title: 'Contacto - Dayvis Atao' },
+    {path: 'gallery', component : Gallery, title: 'Galeria - Dayvis Atao' },
+    {path: 'tools', component : Tools, title: 'Herramientas - - Dayvis Atao' },
+    {path: 'hobbies', component : Hobbies, title: 'Hobbies - Dayvis Atao' },
+    {path: 'gaming', component : Gaming, title: 'Juegos - Dayvis Atao' },
+    {path: 'reading', component : Reading, title: 'Lectura - Dayvis Atao' },
+    {path: 'meals', component : Meals, title: 'Comidas - Dayvis Atao' },
+    {path: 'time-line', component : TimeLine, title: 'Linea de tiempo - Dayvis Atao' },
     {path: '**', redirectTo: ''}
 ];
