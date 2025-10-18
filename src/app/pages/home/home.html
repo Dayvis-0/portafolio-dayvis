@@ -20,30 +20,10 @@
     <div class="container">
         <h2 class="section-title">Mis Habilidades</h2>
         <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">💻</div>
-                <h3>Desarrollo Web</h3>
-                <p>HTML, CSS, JavaScript</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🐍</div>
-                <h3>Python</h3>
-                <p>Algoritmos y estructuras de datos</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon"> ☕</div>
-                <h3>Java</h3>
-                <p>Algoritmos y estructuras de datos</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🛡️</div>
-                <h3>Seguridad</h3>
-                <p>Pentesting y análisis</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🐧</div>
-                <h3>Linux</h3>
-                <p>Comandos y personalización</p>
+            <div class="skill-card" *ngFor="let skill of skills">
+                <div class="skill-icon">{{skill.icon}}</div>
+                <h3>{{skill.name}}</h3>
+                <p>{{skill.description}}</p>
             </div>
         </div>
     </div>
