@@ -33,4 +33,10 @@ export class Skills {
       description: 'Comandos y personalización'
     },
   ]
+
+  constructor() {}
+
+  getSkills() : Skill[] {
+    return this.skills;
+  }
 }

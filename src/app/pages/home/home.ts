@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Skill } from '../models/skill';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Skills } from '../services/skills-services';
+import { Skills } from '../services/skills-service';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +11,11 @@ import { Skills } from '../services/skills-services';
   styleUrl: './home.css'
 })
 export class Home {
-  constructor(private skillsService: Skills) {
-    this.skills = this.skillsService.skills;
-  }
-
   skills: Skill[] = [];
+
+  constructor(private skillsService: Skills) {}
+
+  ngOnInit() {
+    this.skills = this.skillsService.getSkills();
+  }
 }
