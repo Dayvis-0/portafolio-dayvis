@@ -186,47 +186,6 @@
     font-weight: 600;
 }
 
-/* Resources Grid */
-.resources-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.resource-card {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    text-align: center;
-    transition: var(--transition);
-}
-
-.resource-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--accent-primary);
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
-}
-
-.resource-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.resource-card h4 {
-    color: var(--text-primary);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.8rem;
-}
-
-.resource-card p {
-    color: var(--text-secondary);
-    line-height: 1.5;
-    font-size: 0.9rem;
-}
 
 /* Philosophy Card */
 .tools-philosophy {
@@ -300,32 +259,6 @@
 .tool-card:nth-child(1) { animation-delay: 0.1s; }
 .tool-card:nth-child(2) { animation-delay: 0.2s; }
 .tool-card:nth-child(3) { animation-delay: 0.3s; }
-
-/* Section Styles */
-.section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    background: var(--accent-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.section-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-
 
 /* Tools Comparison Table Styles */
 .tools-comparison {
