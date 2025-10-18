@@ -22,5 +22,7 @@ export class SkillsCategoriesService {
 
   constructor() {}
 
-  getSkillCategory() { return this.skillsCategorys; }
+  getSkillCategory() : SkillCategory[] { 
+    return this.skillsCategorys; 
+  }
 }

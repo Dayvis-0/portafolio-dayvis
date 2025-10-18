@@ -12,9 +12,9 @@
                         <p class="about-subtitle">Estudiante de Ingeniería de sistemas</p>
                     </div>
                     <div class="about-description">
-                        <p>Soy un estudiante apasionado por el mundo de la informática, especialmente interesado en la programación y la seguridad informática. Mi curiosidad me lleva a explorar constantemente nuevas tecnologías y metodologías en el campo del desarrollo de software.</p>
-                        <p>Mi enfoque principal está en el desarrollo web y la ciberseguridad, donde combino creatividad con análisis técnico profundo. Me fascina entender cómo funcionan los sistemas y cómo se pueden mejorar o proteger.</p>
-                        <p>En mi tiempo libre disfruto de la lectura, ya que considero que el aprendizaje continuo es fundamental en el campo tecnológico. También me gusta jugar en línea con mis amigos, lo que me permite mantener un equilibrio saludable entre el estudio y el entretenimiento.</p>
+                        <p *ngFor="let description of aboutDescriptions">
+                            {{ description}}
+                        </p>
                     </div>
                     <div class="about-highlights">
                         <div class="highlights-item" *ngFor="let aboutHighlight of aboutHighlights">
