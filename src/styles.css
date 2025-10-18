@@ -1,41 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-
-:root {
-    --bg-primary: #0c1427;
-    --bg-secondary: #162135;
-    --text-primary: #ffffff;
-    --text-secondary: #b0b9d0;
-    --accent-primary: #3b82f6;
-    --accent-secondary: #1d4ed8;
-    --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    --border-color: rgba(255, 255, 255, 0.1);
-    --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.3);
-    --section-padding: 5rem 1rem;
-    --border-radius: 16px;
-    --transition: all 0.3s ease;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
+@import 'app/styles/_variables.css';
+@import 'app/styles/_head_body.css';
+@import 'app/styles/_resources_grid.css';
+@import 'app/styles/_section.css';
+@import 'app/styles/_skill_preview.css';
+@import 'app/styles/_buttons.css';
+@import 'app/styles/_time_line.css';
