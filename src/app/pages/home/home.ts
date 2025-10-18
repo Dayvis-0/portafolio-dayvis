@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Skill } from '../models/skill';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Skills } from '../services/skills-service';
+import { Skill } from '../models/skill';
 
 @Component({
   selector: 'app-home',

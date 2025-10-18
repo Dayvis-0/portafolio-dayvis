@@ -17,17 +17,9 @@
                         <p>En mi tiempo libre disfruto de la lectura, ya que considero que el aprendizaje continuo es fundamental en el campo tecnológico. También me gusta jugar en línea con mis amigos, lo que me permite mantener un equilibrio saludable entre el estudio y el entretenimiento.</p>
                     </div>
                     <div class="about-highlights">
-                        <div class="highlights-item">
-                            <span class="highlight-number">3</span>
-                            <span class="highlight-text">Certificaciones</span>
-                        </div>
-                        <div class="highlights-item">
-                            <span class="highlight-number">1</span>
-                            <span class="highlight-text">Proyecto</span>
-                        </div>
-                        <div class="highlights-item">
-                            <span class="highlight-number">2</span>
-                            <span class="highlight-text">Años estudiando</span>
+                        <div class="highlights-item" *ngFor="let aboutHighlight of aboutHighlights">
+                            <span class="highlight-number">{{aboutHighlight.amount}}</span>
+                            <span class="highlight-text">{{aboutHighlight.text | uppercase}}</span>
                         </div>
                     </div>
                 </div>
