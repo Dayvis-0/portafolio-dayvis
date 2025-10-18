@@ -5,7 +5,7 @@ import { Skill } from '../models/skill';
   providedIn: 'root'
 })
 
-export class Skills {
+export class SkillsService {
   skills: Skill[] = [
     {
       icon: '💻',

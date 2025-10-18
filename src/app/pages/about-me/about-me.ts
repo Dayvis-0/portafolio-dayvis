@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AboutHighlights } from '../services/about-highlights';
+import { AboutHighlightsService } from '../services/about.highlights.service';
 import { AboutHighlight } from '../models/about-highlight';
+import { SkillCategory } from '../models/skill-category';
+import { SkillsCategoriesService } from '../services/skills.categories.service';
 
 @Component({
   selector: 'app-about-me',
@@ -12,10 +14,16 @@ import { AboutHighlight } from '../models/about-highlight';
 })
 export class AboutMe {
   aboutHighlights: AboutHighlight[] = [];
-
-  constructor(private aboutHighlightsService: AboutHighlights) {}
+  skillsCategorys: SkillCategory[] = [];
+  
+  constructor(
+    private aboutHighlightsService: AboutHighlightsService,
+    private skillsCategorysService: SkillsCategoriesService,
+  ) {}
+  
 
   ngOnInit() {
     this.aboutHighlights = this.aboutHighlightsService.getAboutHighlights();
+    this.skillsCategorys = this.skillsCategorysService.getSkillCategory();
   }
 }

@@ -5,7 +5,7 @@ import { AboutHighlight } from '../models/about-highlight';
   providedIn: 'root'
 })
 
-export class AboutHighlights {
+export class AboutHighlightsService {
   aboutHighlights: AboutHighlight[] = [
     {
       amount: 3,

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Skills } from '../services/skills-service';
+import { SkillsService } from '../services/skills.service';
 import { Skill } from '../models/skill';
 
 @Component({
@@ -13,7 +13,7 @@ import { Skill } from '../models/skill';
 export class Home {
   skills: Skill[] = [];
 
-  constructor(private skillsService: Skills) {}
+  constructor(private skillsService: SkillsService) {}
 
   ngOnInit() {
     this.skills = this.skillsService.getSkills();

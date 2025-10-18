@@ -35,30 +35,12 @@
         <div class="skills-detailed">
             <h3 class="skills-title">Habilidades Técnicas</h3>
             <div class="skills-categories">
-                <div class="skill-category">
-                    <h4>Lenguajes de Programación</h4>
+                <div class="skill-category" *ngFor="let category of skillsCategorys">
+                    <h4>{{ category.title}}</h4>
                     <div class="skill-items">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">Java</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4>Seguridad Informática</h4>
-                    <div class="skill-items">
-                        <span class="skill-tag">Penetration Testing</span>
-                        <span class="skill-tag">Kali Linux</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4>Herramientas y Tecnologías</h4>
-                    <div class="skill-items">
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Databases</span>
-                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag" *ngFor="let skill of category.skills">
+                            {{ skill }}
+                        </span>
                     </div>
                 </div>
             </div>
