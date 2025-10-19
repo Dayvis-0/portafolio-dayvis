@@ -1,30 +1,51 @@
 <section class="hero">
-    <div class="hero-container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="hero-greeting">Hola, soy</span>
-                    <span class="text-gradient hero-name">{{'Dayvis' | uppercase}}</span>
-                </h1>
-                <p class="hero-description">Apasionado de la programación y la seguridad informática</p>
-                <div class="hero-actions">
-                    <a href="/about-me" class="btn btn-primary">Sobre mí</a>
-                    <a href="/contact" class="btn btn-secondary">Contáctame</a>
-                </div>
-            </div>
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="hero-greeting">Hola, soy</span>
+          <span class="text-gradient hero-name">{{ 'Dayvis' | uppercase }}</span>
+        </h1>
+        <p class="hero-description">
+          Apasionado de la programación y la seguridad informática
+        </p>
+        <div class="hero-actions">
+          <a href="/about-me" class="btn btn-primary">Sobre mí</a>
+          <a href="/contact" class="btn btn-secondary">Contáctame</a>
         </div>
+      </div>
     </div>
-    <div class="hero-particles"></div>
+  </div>
 </section>
 <section class="skills-preview">
-    <div class="container">
-        <h2 class="section-title">Mis Habilidades</h2>
-        <div class="skills-grid">
-            <div class="skill-card" *ngFor="let skill of skills">
-                <div class="skill-icon">{{skill.icon}}</div>
-                <h3>{{skill.name}}</h3>
-                <p>{{skill.description}}</p>
+  <div class="container">
+    <h2 class="section-title">Mis Habilidades</h2>
+    <div class="skills-grid">
+      <div
+        class="skill-card"
+        *ngFor="let skill of skills"
+        (click)="selectSkill(skill)"
+        [class.flipped]="selectedSkill === skill"
+      >
+        <div class="skill-card-inner">
+          <!-- Lado frontal -->
+          <div class="skill-card-front">
+            <div class="skill-icon">
+              <img [src]="skill.icon" [alt]="skill.name" />
             </div>
+            <h3>{{ skill.name }}</h3>
+            <div class="click-hint">
+                <i class="fa-solid fa-hand-pointer"></i>Click para ver más
+            </div>
+          </div>
+
+          <!-- Lado trasero -->
+          <div class="skill-card-back">
+            <h3>{{ skill.name }}</h3>
+            <p>{{ skill.description }}</p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>

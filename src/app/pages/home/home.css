@@ -1,4 +1,5 @@
 /* Hero Section */
+@import url(skill-grid.css);
 .hero {
     min-height: 100vh;
     display: flex;

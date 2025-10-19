@@ -8,28 +8,38 @@ import { Skill } from '../models/skill';
 export class SkillsService {
   skills: Skill[] = [
     {
-      icon: '💻',
-      name: 'Desarrollo Web',
-      description: 'HTML, CSS, JavaScript'
+      icon: '/img/html5.png',
+      name: 'HTML',
+      description: 'Desarrollo Web'
     },
     {
-      icon: '🐍',
+      icon: '/img/css3.png',
+      name: 'CSS',
+      description: 'Desarrollo Web'
+    },
+    {
+      icon: '/img/js.png',
+      name: 'JavaScript',
+      description: 'Desarrollo Web'
+    },
+    {
+      icon: '/img/python.png',
       name: 'Python',
       description: 'Algoritmos y estructuras de datos'
     },
     {
-      icon: '☕',
+      icon: '/img/java.png',
       name: 'Java',
       description: 'Algoritmos y estructuras de datos'
     },
     {
-      icon: '🛡️',
+      icon: '/img/kali.png',
       name: 'Seguridad',
       description: 'Pentesting y análisis'
     },
     {
-      icon: '🐧',
-      name: 'Linux',
+      icon: '/img/linux.png',
+      name: 'GNU/Linux',
       description: 'Comandos y personalización'
     },
   ]
