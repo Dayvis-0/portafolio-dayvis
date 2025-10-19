@@ -1,7 +1,7 @@
 /* Timeline Styles */
 .timeline-section {
     padding: var(--section-padding);
-    min-height: 100vh;
+    padding-bottom: 0;
 }
 
 .timeline-intro {
@@ -42,9 +42,8 @@
 /* Timeline Stats */
 .timeline-stats {
     margin: 5rem 0;
-    padding: 3rem 0;
+    padding: 2rem 0;
     border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
 }
 
 .stats-title {
