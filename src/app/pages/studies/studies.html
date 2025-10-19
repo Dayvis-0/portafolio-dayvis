@@ -16,8 +16,7 @@
                         </div>
                         <p class="timeline-institution">Universidad Nacional José María Arguedas</p>
                         <p class="timeline-description">
-                            Cursando estudios en la carrera de Ingeniería de Sistemas. 
-                                                                Aprendiendo fundamentos teóricos y prácticos de la programación, bases de datos, redes y sistemas operativos.
+                            Cursando estudios en la carrera de Ingeniería de Sistemas. Aprendiendo fundamentos teóricos y prácticos de la programación, bases de datos, redes y sistemas operativos.
                         </p>
                         <div class="timeline-subjects">
                             <span class="subject-tag">Programación</span>
@@ -211,184 +210,20 @@
     </div>
     <div class="academic-record">
         <h3 class="section-subtitle">Registro Académico</h3>
-        
-        <div class="cycle-record">
-            <h4 class="cycle-title">Ciclo I</h4>
+        <div class="cycle-record" *ngFor="let cycle of academicRegistry">
+            <h4 class="cycle-title">{{ cycle.title }}</h4>
             <ul class="course-list">
-                <li>
-                    <span class="course-name">REDACCIÓN UNIVERSITARIA Y ORATORIA</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">INGLÉS</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">REALIDAD REGIONAL Y NACIONAL</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">EXPRESIÓN ARTISTICA</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">DIBUJO DE INGENIERÍA</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">MATEMÁTICA BÁSICA I</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">INTRODUCCIÓN A LA INGENIERÍA DE SISTEMAS</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-            </ul>
-        </div>
-        <div class="cycle-record">
-            <h4 class="cycle-title">Ciclo II</h4>
-            <ul class="course-list">
-                <li>
-                    <span class="course-name">MATEMÁTICA DISCRETA</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">INGLÉS TÉCNICO</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">INGENIERÍA ECONÓMICA</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">MATEMÁTICA BÁSICA II</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">CÁLCULO DIFERENCIAL E INTEGRAL</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">5 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">METODOLOGÍA DE LA PROGRAMACIÓN</span>
-                    <span class="status completed">Complido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-            </ul>
-        </div>
-        <div class="cycle-record">
-            <h4 class="cycle-title">Ciclo III</h4>
-            <ul class="course-list">
-                <li>
-                    <span class="course-name">CÁLCULO MULTIVARIABLE</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">5 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">FÍSICA GENERAL</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">COSTOS Y PRESUPUESTOS</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">ALGORITMOS Y ESTRUCTURAS DE DATOS I</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">ESTADÍSTICA Y PROBABILIDADES</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">TEORIA GENERAL DE SISTEMAS</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-            </ul>
-        </div>
-        <div class="cycle-record">
-            <h4 class="cycle-title">Ciclo IV</h4>
-            <ul class="course-list">
-                <li>
-                    <span class="course-name">ECUACIONES DIFERENCIALES</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">SISTEMAS ELÉCTRICOS Y ELECTRÓNICOS</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">ESTADÍSTICA INFERENCIAL</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">SISTEMAS OPERATIVOS</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">ALGORITMOS Y ESTRUCTURAS DE DATOS II</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">BASE DE DATOS I</span>
-                    <span class="status completed">Cumplido</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-            </ul>
-        </div>
-        <div class="cycle-record">
-            <h4 class="cycle-title">Ciclo V</h4>
-            <ul class="course-list">
-                <li>
-                    <span class="course-name">DESARROLLO E INNOVACIÓN TECNOLÓGICA</span>
-                    <span class="status current">Cursando</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">SISTEMAS DE INFORMACIÓN</span>
-                    <span class="status current">Cursando</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">PROGRAMACIÓN WEB</span>
-                    <span class="status current">Cursando</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">SISTEMAS DIGITALES</span>
-                    <span class="status current">Cursando</span>
-                    <span class="credits">3 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">REDES DE COMPUTADORAS  I</span>
-                    <span class="status current">Cursando</span>
-                    <span class="credits">4 Créditos</span>
-                </li>
-                <li>
-                    <span class="course-name">BASE DE DATOS II</span>
-                    <span class="status current">Cursando</span>
-                    <span class="credits">3 Créditos</span>
+                <li *ngFor="let course of cycle.course">
+                    <span class="course-name">{{ course.name }}</span>
+                    <span 
+                        class="status " 
+                        [ngClass]="{
+                            'completed' : course.status === 'Cumplido',
+                            'current' : course.status === 'Cursando'
+                        }">
+                        {{ course.status }}
+                    </span>
+                    <span class="credits"> {{ course.credits }} Créditos</span>
                 </li>
             </ul>
         </div>
