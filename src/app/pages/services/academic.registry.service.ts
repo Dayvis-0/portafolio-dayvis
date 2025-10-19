@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Cycle } from '../models/academic-registry';
+import { Cycle } from '../../models/academic-registry';
 
 @Injectable({
   providedIn: 'root'

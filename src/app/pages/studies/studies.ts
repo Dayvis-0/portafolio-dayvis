@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Cycle } from '../models/academic-registry';
+import { Cycle } from '../../models/academic-registry';
 import { AcademicRegistryService } from '../services/academic.registry.service';
 
 @Component({

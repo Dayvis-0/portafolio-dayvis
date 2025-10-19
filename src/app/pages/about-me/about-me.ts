@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AboutHighlightsService } from '../services/about.highlights.service';
-import { AboutHighlight } from '../models/about-highlight';
-import { SkillCategory } from '../models/skill-category';
-import { SkillsCategoriesService } from '../services/skills.categories.service';
-import { AboutDescription } from '../models/about-description';
-import { AboutDescriptionService } from '../services/about.description.service';
+import { AboutHighlightsService } from '../../services/about.highlights.service';
+import { AboutHighlight } from '../../models/about-highlight';
+import { SkillCategory } from '../../models/skill-category';
+import { SkillsCategoriesService } from '../../services/skills.categories.service';
+import { AboutDescription } from '../../models/about-description';
+import { AboutDescriptionService } from '../../services/about.description.service';
 
 @Component({
   selector: 'app-about-me',
