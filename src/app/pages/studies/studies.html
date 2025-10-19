@@ -42,28 +42,15 @@
         <div class="certifications-section">
             <h3 class="section-subtitle">Certificaciones</h3>
             <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="cert-icon">🛡️</div>
-                    <div class="cert-content">
-                        <h4>Certificación en Seguridad Informática</h4>
-                        <p class="cert-issuer">Plataforma OTI UNI</p>
-                        <p class="cert-date">2025</p>
-                        <p class="cert-description">Fundamentos de ciberseguridad, análisis de vulnerabilidades y técnicas de pentesting.</p>
-                        <div class="cert-skills">
-                            <span class="skill-tag">Pentesting</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">💻</div>
-                    <div class="cert-content">
-                        <h4>Web Development Fundamentals</h4>
-                        <p class="cert-issuer">Academia Online</p>
-                        <p class="cert-date">2025</p>
-                        <p class="cert-description">Desarrollo web con HTML, CSS, JavaScript.</p>
-                        <div class="cert-skills">
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">JavaScript</span>
+                <div class="certification-card" *ngFor="let certification of certifications">
+                    <div class="cert-icon">{{ certification.icon }}</div>
+                    <div class="cert-content" *ngFor="let cont of certification.content">
+                        <h4> {{ cont.name }} </h4>
+                        <p class="cert-issuer"> {{ cont.issuer }}</p>
+                        <p class="cert-date"> {{ cont.date | date:'longDate' }} </p>
+                        <p class="cert-description"> {{ cont.description }} </p>
+                        <div class="cert-skills" *ngFor="let skill of cont.skills">
+                            <span class="skill-tag"> {{ skill.skill }} </span>
                         </div>
                     </div>
                 </div>
