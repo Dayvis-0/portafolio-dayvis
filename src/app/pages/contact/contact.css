@@ -207,3 +207,85 @@
     left: 0;
     color: var(--accent-primary);
 }
+
+/* 🔹 Animación para que aparezca suavemente */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.success i {
+    color: #00ffc8;
+    margin-right: 8px;
+    animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.succes {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: var(--accent-gradient);
+    color: white;
+    border: 1px solid #28a745;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.succes i {
+    color: var(--bg-secondary);
+    font-size: 1.2rem;
+}
+
+.succes {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent-primary);
+    border: 2px solid var(--accent-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 🔹 Cuando el botón está disabled, dale un efecto “bloqueado elegante” */
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(0.4);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Efecto sutil al pasar el mouse (aunque esté deshabilitado) */
+button[disabled]:hover {
+  box-shadow: none;
+  transform: none;
+}

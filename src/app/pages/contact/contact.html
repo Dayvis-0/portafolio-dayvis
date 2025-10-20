@@ -37,25 +37,31 @@
                 </div>
                 <div class="contact-form-section">
                     <h3>O escríbeme directamente</h3>
-                    <form class="contact-form">
+                    <form (ngSubmit)="sendMessage()" #formContact="ngForm" class="contact-form">
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" [(ngModel)]="contact.name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" [(ngModel)]="contact.email" required>
                         </div>
                         <div class="form-group">
                             <label for="subject">Asunto</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="subject" [(ngModel)]="contact.subject" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" [(ngModel)]="contact.message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-secondary" [disabled]="!formContact.valid">
+                            Enviar Mensaje
+                        </button>
                     </form>
+                    <p *ngIf="messageSent" class="succes">
+                        <i class="fa-solid fa-circle-check"></i>
+                        ✅ ¡Gracias {{ contact.name }}! Tu mensaje ha sido enviado.
+                    </p>
                 </div>
             </div>
             <div class="contact-sidebar">
