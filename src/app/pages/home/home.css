@@ -1,5 +1,7 @@
-/* Hero Section */
 @import url(skill-grid.css);
+@import url(mouse.css);
+
+/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;

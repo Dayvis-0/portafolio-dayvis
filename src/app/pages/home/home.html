@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero" id="top">
   <div class="hero-container">
     <div class="hero-content">
       <div class="hero-text">
@@ -17,6 +17,12 @@
     </div>
   </div>
 </section>
+<div class="home-hero__mouse-scroll-cont">
+  <div class="mouse"></div>
+</div>
+<div id="about-me">
+  <app-about-me></app-about-me>
+</div>
 <section class="skills-preview">
   <div class="container">
     <h2 class="section-title">Mis Habilidades</h2>
@@ -28,7 +34,6 @@
         [class.flipped]="selectedSkill === skill"
       >
         <div class="skill-card-inner">
-          <!-- Lado frontal -->
           <div class="skill-card-front">
             <div class="skill-icon">
               <img [src]="skill.icon" [alt]="skill.name" />
@@ -38,8 +43,6 @@
                 <i class="fa-solid fa-hand-pointer"></i>Click para ver más
             </div>
           </div>
-
-          <!-- Lado trasero -->
           <div class="skill-card-back">
             <h3>{{ skill.name }}</h3>
             <p>{{ skill.description }}</p>

@@ -1,7 +1,8 @@
 /* About Section Styles */
 .about-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .about-card {

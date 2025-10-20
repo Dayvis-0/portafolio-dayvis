@@ -10,6 +10,6 @@ export const routes: Routes = [
     {path: 'about-me', component : AboutMe, title: 'Sobre mí - Dayvis Atao' },
     {path: 'studies', component : Studies, title: 'Estudios - Dayvis Atao' },
     {path: 'contact', component : Contact, title: 'Contacto - Dayvis Atao' },
-    {path: 'tools', component : Tools, title: 'Herramientas - - Dayvis Atao' },
+    {path: 'tools', component : Tools, title: 'Herramientas - Dayvis Atao' },
     {path: '**', redirectTo: ''}
 ];
