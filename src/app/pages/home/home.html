@@ -10,13 +10,18 @@
           Apasionado de la programación y la seguridad informática
         </p>
         <div class="hero-actions">
-          <a href="/about-me" class="btn btn-primary">Sobre mí</a>
+          <a href="#about-me" class="btn btn-primary">Sobre mí</a>
           <a href="/contact" class="btn btn-secondary">Contáctame</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+<app-welcome-card>
+  [userName] = "'Dayvis'"
+  (greet) = "sendGreeting($event)"
+</app-welcome-card>
+<p *ngIf="greetingMessage" class="mensaje-saludo"> {{ greetingMessage }} </p>
 <div class="home-hero__mouse-scroll-cont">
   <div class="mouse"></div>
 </div>
