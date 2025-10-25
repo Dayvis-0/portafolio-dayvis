@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AboutHighlightsService } from '../../services/about.highlights.service';
-import { AboutHighlight } from '../../models/about-highlight';
-import { AboutDescription } from '../../models/about-description';
-import { AboutDescriptionService } from '../../services/about.description.service';
+import { AboutService } from '../../services/about.service';
+import { AboutHighlight } from '../../models/about';
+
 
 @Component({
   selector: 'app-about-me',
@@ -14,16 +13,15 @@ import { AboutDescriptionService } from '../../services/about.description.servic
   styleUrl: './about-me.css'
 })
 export class AboutMe {
+  isLoading: boolean = true;
+  aboutDescriptions: string[] = [];
   aboutHighlights: AboutHighlight[] = [];
-  aboutDescriptions: AboutDescription[] = [];
-  
-  constructor(
-    private aboutHighlightsService: AboutHighlightsService,
-    private aboutDescriptionsService: AboutDescriptionService, 
-  ) {}
 
-  ngOnInit() {
-    this.aboutHighlights = this.aboutHighlightsService.getAboutHighlights();
-    this.aboutDescriptions = this.aboutDescriptionsService.getAboutDescription();
+  constructor(private aboutService: AboutService) {}
+
+  async ngOnInit() {
+    this.aboutDescriptions = await this.aboutService.getDescriptions();
+    this.aboutHighlights = await this.aboutService.getHighlights();
+    this.isLoading = false;
   }
 }

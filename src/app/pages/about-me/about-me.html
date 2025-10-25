@@ -4,7 +4,15 @@
             <h2 class="section-title">Sobre mí</h2>
             <p class="section-subtitle">Conoce mi trayectoria y pasiones</p>
         </div>
-        <div class="about-card">
+
+        <!-- Muestra mientras carga -->
+        <div class="loading-container" *ngIf="isLoading">
+            <div class="spinner"></div>
+            <p class="loading-text">Cargando información...</p>
+        </div>
+
+        <!-- Muestra cuando termina de cargar -->
+        <div class="about-card" *ngIf="!isLoading">
             <div class="about-content">
                 <div class="about-text">
                     <div class="about-hero">
@@ -13,21 +21,20 @@
                     </div>
                     <div class="about-description">
                         <p *ngFor="let description of aboutDescriptions">
-                            {{ description}}
+                            {{ description }}
                         </p>
                     </div>
                     <div class="about-highlights">
-                        <div class="highlights-item" *ngFor="let aboutHighlight of aboutHighlights">
-                            <span class="highlight-number">{{aboutHighlight.amount}}</span>
-                            <span class="highlight-text">{{aboutHighlight.text | uppercase}}</span>
+                        <div class="highlights-item" *ngFor="let highlight of aboutHighlights">
+                            <span class="highlight-number">{{ highlight.amount }}</span>
+                            <span class="highlight-text">{{ highlight.text | uppercase }}</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-visual">
                     <div class="profile-container">
                         <img src="/img/yo.jpg" class="profile-image-large">
-                        <div class="profile-overlay">
-                        </div>
+                        <div class="profile-overlay"></div>
                     </div>
                 </div>
             </div>

@@ -17,43 +17,10 @@
     </div>
   </div>
 </section>
-<app-welcome-card>
-  [userName] = "'Dayvis'"
-  (greet) = "sendGreeting($event)"
-</app-welcome-card>
-<p *ngIf="greetingMessage" class="mensaje-saludo"> {{ greetingMessage }} </p>
 <div class="home-hero__mouse-scroll-cont">
   <div class="mouse"></div>
 </div>
 <div id="about-me">
   <app-about-me></app-about-me>
 </div>
-<section class="skills-preview">
-  <div class="container">
-    <h2 class="section-title">Mis Habilidades</h2>
-    <div class="skills-grid">
-      <div
-        class="skill-card"
-        *ngFor="let skill of skills"
-        (click)="selectSkill(skill)"
-        [class.flipped]="selectedSkill === skill"
-      >
-        <div class="skill-card-inner">
-          <div class="skill-card-front">
-            <div class="skill-icon">
-              <img [src]="skill.icon" [alt]="skill.name" />
-            </div>
-            <h3>{{ skill.name }}</h3>
-            <div class="click-hint">
-                <i class="fa-solid fa-hand-pointer"></i>Click para ver más
-            </div>
-          </div>
-          <div class="skill-card-back">
-            <h3>{{ skill.name }}</h3>
-            <p>{{ skill.description }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-skills></app-skills>
