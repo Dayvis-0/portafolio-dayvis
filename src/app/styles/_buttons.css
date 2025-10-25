@@ -15,8 +15,9 @@
 }
 
 .btn-primary {
-    background: var(--accent-gradient);
-    color: white;
+    /* Softer, pastel gradient for a gentler background */
+    background: linear-gradient(90deg, rgba(127,178,255,0.95), rgba(189,221,255,0.95));
+    color: #042143; /* dark navy for readable contrast on light pastel */
 }
 
 .btn-primary:hover, .btn-secondary:hover {
@@ -31,7 +32,7 @@
 }
 
 .btn-secondary:hover {
-    background: var(--accent-primary);
-    color: white;
+    background: inear-gradient(90deg, rgba(127,178,255,0.95), rgba(189,221,255,0.95));
+    color: #fff;
     transform: translateY(-2px);
 }

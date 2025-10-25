@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SkillsService } from '../../services/skills.service';
 import { Skill } from '../../models/skill';
+import { SkillCard } from '../../components/skill-card/skill-card';
 
 @Component({
   selector: 'app-skills',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, SkillCard], // 👈 Importa el hijo
   templateUrl: './skills.html',
   styleUrl: './skills.css'
 })
@@ -21,8 +22,10 @@ export class Skills {
     this.skills = this.skillsService.getSkills();
   }
 
-  selectSkill(skill: Skill) {
+  // 📥 Método que recibe el evento del componente hijo
+  onSkillSelected(skill: Skill) {
     this.selectedSkill = this.selectedSkill === skill ? null : skill;
+    console.log('Habilidad seleccionada:', skill.name);
   }
 
   sendGreeting(message: string) {

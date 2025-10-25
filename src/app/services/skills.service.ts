@@ -53,7 +53,7 @@ export class SkillsService {
       description: 'Control de versiones para todos mis proyectos.'
     },
     {
-      icon: '/img/github1.png',
+      icon: '/img/github2.png',
       name: 'GitHub',
       description: 'Plataforma en la nube para alojar y gestionar mis repositorios Git.'
     },

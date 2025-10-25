@@ -1,26 +1,20 @@
 <section class="skills-preview">
   <div class="container">
     <h2 class="section-title">Mis Habilidades</h2>
+    
+    <!-- Mensaje opcional cuando se selecciona una habilidad -->
+    <div *ngIf="selectedSkill" class="selected-skill-message">
+      <p>Has seleccionado: <strong>{{ selectedSkill.name }}</strong></p>
+    </div>
+
     <div class="skills-grid">
-      <div
-        class="skill-card"
+      <!-- 🔥 Aquí usamos el componente hijo -->
+      <app-skill-card
         *ngFor="let skill of skills"
-        (click)="selectSkill(skill)"
-        [class.flipped]="selectedSkill === skill"
-      >
-        <div class="skill-card-inner">
-          <div class="skill-card-front">
-            <div class="skill-icon">
-              <img [src]="skill.icon" [alt]="skill.name" />
-            </div>
-            <h3>{{ skill.name }}</h3>
-          </div>
-          <div class="skill-card-back">
-            <h3>{{ skill.name }}</h3>
-            <p>{{ skill.description }}</p>
-          </div>
-        </div>
-      </div>
+        [skill]="skill"
+        [isFlipped]="selectedSkill === skill"
+        (cardClicked)="onSkillSelected($event)"
+      ></app-skill-card>
     </div>
   </div>
 </section>

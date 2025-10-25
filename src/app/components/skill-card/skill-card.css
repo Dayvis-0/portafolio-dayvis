@@ -1,0 +1,104 @@
+/* 🔹 TARJETA DE HABILIDAD*/
+.skill-card {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+/* efecto activo visual (color, sombra, etc) */
+.skill-card.active {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* 🔹 INTERIOR 3D (FRONT + BACK)*/
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.skill-card.flipped .skill-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Lados de la tarjeta */
+.skill-card-front,
+.skill-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  background: var(--bg-primary, rgba(255, 255, 255, 0.05));
+  color: var(--text-primary, #fff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.skill-card-back {
+  transform: rotateY(180deg);
+  background: rgba(0, 255, 255, 0.08);
+}
+
+/* 🔹 ÍCONO / IMAGEN*/
+.skill-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.skill-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  padding: 4px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover .skill-icon img {
+  transform: scale(1.1);
+}
+
+.skill-card.active .skill-icon img {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* 🔹 Al pasar el mouse, aparece suavemente */
+.skill-card:hover .click-hint {
+  opacity: 1;
+  transform: translateY(0);
+  color: #fff;
+}
+
+/* 🔹 Pequeño ícono animado */
+.click-hint i {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  animation: hintWiggle 2.5s infinite ease-in-out;
+}
+
+/* Animación sutil de movimiento */
+@keyframes hintWiggle {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
