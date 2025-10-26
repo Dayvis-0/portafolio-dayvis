@@ -1,9 +1,4 @@
 /* Tools/Herramientas Styles */
-.tools-section {
-    padding: var(--section-padding);
-    padding-bottom: 0;
-}
-
 .tools-categories {
     margin: 4rem 0;
 }

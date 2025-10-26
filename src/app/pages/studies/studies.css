@@ -1,10 +1,4 @@
 /* Studies Section Styles */
-.studies-section {
-    padding: 6rem 0;
-    padding-top: 100px;
-    padding-bottom: 0;
-}
-
 .education-timeline {
     margin-bottom: 4rem;
 }
@@ -156,7 +150,6 @@
 .timeline-item:nth-child(13) { animation-delay: 1.3s; }
 .timeline-item:nth-child(14) { animation-delay: 1.4s; }
 
-
 /* Certifications Section */
 .certifications-section {
     margin: 4rem 0;
@@ -228,7 +221,6 @@
     gap: 0.5rem;
 }
 
-
 /* Learning Section */
 .learning-section {
     margin: 4rem 0;
@@ -284,7 +276,6 @@
     left: 0;
     color: var(--accent-primary);
 }
-
 
 /* Skills Progress Section */
 .skills-progress-section {

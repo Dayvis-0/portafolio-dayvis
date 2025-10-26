@@ -1,9 +1,4 @@
 /* Timeline Styles */
-.timeline-section {
-    padding: var(--section-padding);
-    padding-bottom: 0;
-}
-
 .timeline-intro {
     margin: 3rem 0;
 }
