@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AboutService } from '../../services/about.service';
 import { AboutHighlight } from '../../models/about';
-
+import { UppercaseCustomPipe } from '../../pipes/uppercase-custom-pipe';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, UppercaseCustomPipe],
   templateUrl: './about-me.html',
   styleUrl: './about-me.css'
 })

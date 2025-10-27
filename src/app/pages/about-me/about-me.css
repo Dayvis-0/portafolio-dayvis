@@ -1,4 +1,8 @@
 /* Contenedor de carga */
+.about-section {
+    padding: 6rem;
+}
+
 .loading-container {
     display: flex;
     flex-direction: column;
