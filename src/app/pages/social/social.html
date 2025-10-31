@@ -1,0 +1,11 @@
+<div class="container"></div>
+<div class="social">
+    <div>
+        <p>Nombre:  {{ datos.Nombre }}</p>
+        <p>DNI: {{ datos.DNI }}</p>
+        <span class="likes">like: {{ datos.like}}</span>
+    </div>
+    <button  (click)="sumLikes()"
+    class="btn btn-primary">
+    Like</button>
+</div>  

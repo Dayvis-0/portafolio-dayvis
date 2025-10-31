@@ -10,11 +10,13 @@ import { Gaming } from './pages/gaming/gaming';
 import { Reading } from './pages/reading/reading';
 import { Meals } from './pages/meals/meals';
 import { TimeLine } from './pages/time-line/time-line';
+import { Social } from './pages/social/social';
 
 export const routes: Routes = [
     {path: '', component : Home, title: 'Dayvis Atao - Portafolio' },
     {path: 'about-me', component : AboutMe, title: 'Sobre mí - Dayvis Atao' },
     {path: 'contact', component : Contact, title: 'Contacto - Dayvis Atao' },
+    {path: 'social', component : Social, title: 'Social - Dayvis Atao' },
     {path: 'studies', component : Studies, title: 'Estudios - Dayvis Atao' },
     {path: 'gallery', component : Gallery, title: 'Galeria - Dayvis Atao' },
     {path: 'tools', component : Tools, title: 'Herramientas - Dayvis Atao' },
